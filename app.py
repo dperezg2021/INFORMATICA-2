@@ -4,6 +4,8 @@ from musica.plataforma import PlataformaMusical, Cancion
 import os
 import pygame
 
+#### Pedir int ####
+
 def pedir_int(mensaje):
     while True:
         try:
