@@ -20,6 +20,7 @@ class Cancion:
                 return False
             
             pygame.mixer.init()
+            pygame.mixer.music.stop()
             pygame.mixer.music.load(self.archivo_mp3)
             pygame.mixer.music.play()
             self.reproduciendo = True
@@ -32,10 +33,10 @@ class Cancion:
             print(f"L Error inesperado: {e}")
             return False
     
-    def detener(self):
-        """Detiene la reproducción"""
-        pygame.mixer.music.stop()
-        self.reproduciendo = False
+    # def detener(self):
+    #     """Detiene la reproducción"""
+    #     pygame.mixer.music.stop()
+    #     self.reproduciendo = False
 
 class ListaReproduccion:
     def __init__ ( self, nombre:str):

@@ -295,7 +295,7 @@ def eliminar_cancion_lista(plataforma):
     for song in plataforma.canciones:
         print(f"{song.id}) {song.titulo} - {song.artista}")
     
-    id_seleccionado=pedir_int('Selecciona número de la canción a añadir (0 para cancelar): ') 
+    id_seleccionado=pedir_int('Selecciona número de la canción a eliminar (0 para cancelar): ') 
     if id_seleccionado == 0:
         return
     
