@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Interfaz por consola para la PlataformaMusical (parte 1)."""
-from musica.plat import PlataformaMusical, Cancion
+from musica.plataforma import PlataformaMusical, Cancion
 import os
 import pygame
 
