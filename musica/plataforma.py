@@ -94,16 +94,6 @@ class PlataformaMusical:
                 return True  
         return False 
     
-    def listar_canciones(self):
-        
-        if not self.canciones:
-            print("No hay canciones registradas :(")
-            return
-        print ('\n --- Lista de Canciones')
-        for song in self.canciones:
-            print (song)
-        print(f"Total : {len(self.canciones)} canciones")
-    
     def crear_lista(self,nombre):
         for lista in self.listas:
             if lista.nombre.lower() == nombre.lower():

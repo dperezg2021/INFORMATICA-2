@@ -34,7 +34,7 @@ def menu_canciones(plataforma):
             print("opcion3")
             eliminar_cancion(plataforma)
         elif opc == 4:
-            plataforma.listar_canciones()
+            listar_canciones(plataforma)
         elif opc == 0:
             print('Volviendo...')
             return
@@ -110,6 +110,16 @@ def eliminar_cancion(plataforma):
         print("Eliminada.")
     else:
         print("No se encontró la canción")
+
+def listar_canciones(plataforma):
+    
+    if not plataforma.canciones:
+        print("No hay canciones registradas :(")
+        return
+    print ('\n --- Lista de Canciones')
+    for song in plataforma.canciones:
+        print (song)
+    print(f"Total : {len(plataforma.canciones)} canciones")
         
 #### Gestionar listas ####
 
