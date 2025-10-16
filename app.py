@@ -357,15 +357,12 @@ def menu_reproduccion(plataforma):
                 opcion= input('>').strip().lower()
                 
                 if opcion == 'n':
-                    cancion_actual.detener()
                     indice_actual = (indice_actual + 1) % len(lista_seleccionada.canciones)
                     break
                 elif opcion == 'p':
-                    cancion_actual.detener()
                     indice_actual = (indice_actual - 1) % len(lista_seleccionada.canciones)
                     break
                 elif opcion == 's': 
-                    cancion_actual.detener()
                     pygame.mixer.quit()
                     return
         else:

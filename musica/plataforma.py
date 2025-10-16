@@ -13,7 +13,6 @@ class Cancion:
         return (f"{self.id}) {self.titulo} - {self.artista} ({self.duracion}s) [{self.genero}] -> {self.archivo_mp3}")
     
     def reproducir (self):
-        """Reproduce el archivo MP3 usando pygame"""
         try:
             if not os.path.exists(self.archivo_mp3):
                 print(f"L Error: El archivo {self.archivo_mp3} no existe")
@@ -32,11 +31,6 @@ class Cancion:
         except Exception as e:
             print(f"L Error inesperado: {e}")
             return False
-    
-    # def detener(self):
-    #     """Detiene la reproducción"""
-    #     pygame.mixer.music.stop()
-    #     self.reproduciendo = False
 
 class ListaReproduccion:
     def __init__ ( self, nombre:str):
