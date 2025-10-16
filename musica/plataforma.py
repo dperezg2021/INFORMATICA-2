@@ -87,13 +87,28 @@ class PlataformaMusical:
                 return True
         return False
     
-    def eliminar_cancion(self, id_e:int):
+    def eliminar_cancion(self, id_e: int):
         for c in self.canciones:
             if c.id == id_e:
                 self.canciones.remove(c)
+
+                #actualiza las listas de reproducción
+                for lista in self.listas:
+                    if id_e in lista.canciones:
+                        lista.canciones.remove(id_e)
+                    lista.canciones = [
+                        id_c - 1 if id_c > id_e else id_c for id_c in lista.canciones
+                    ]
+
+                # recalcula los ID de todas las canciones
+                for i, song in enumerate(self.canciones, start=1):
+                    song.id = i
+
+                self.id_actual = len(self.canciones) + 1
                 return True  
-        return False 
-    
+
+        return False
+
     def crear_lista(self,nombre):
         for lista in self.listas:
             if lista.nombre.lower() == nombre.lower():

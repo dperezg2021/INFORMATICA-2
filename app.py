@@ -315,7 +315,6 @@ def eliminar_cancion_lista(plataforma):
     else:
         print("La canción no está en esta lista.")
 
-
 #### menu reproduccion ####
 def menu_reproduccion(plataforma):
     print('\n --- Reproducción ---')
