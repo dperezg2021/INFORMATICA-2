@@ -241,6 +241,8 @@ def mostrar_lista(plataforma):
                 if cancion.id == id_cancion:
                     print(f"{cancion.id}) {cancion.titulo} - {cancion.artista} ({cancion.duracion}s)")
                     break
+  
+################ ver 
                 
 def eliminar_lista(plataforma):
     print('\n --- Eliminar una lista ---')
@@ -267,10 +269,18 @@ def eliminar_lista(plataforma):
     lista_seleccionada = plataforma.listas[id_lista-1]
     nombre_lista = lista_seleccionada.nombre 
     
+    
+    ####obetner_lista?
+    
+    
     lista_verificada = plataforma.obtener_lista(nombre_lista)
     if not lista_verificada:
         print("La lista no existe.")
         return
+    
+    
+    
+    
     plataforma.borrar_lista(nombre_lista)
     print("Eliminada")
 
