@@ -116,6 +116,3 @@ class PlataformaMusical:
             if lista.nombre.lower() == nombre.lower():
                 return lista
         return None
-    
-    def listar_listas(self):
-        return self.listas
