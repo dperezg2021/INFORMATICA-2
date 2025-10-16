@@ -37,9 +37,18 @@ Este proyecto consiste en el desarrollo de una aplicación en Python que permite
    ```bash
    pip install pygame
 
-3. **Crear carpeta biblioteca/**
+3. **Crear carpetas/**
     ```bash
-    mkdir biblioteca
+
+    ├── app.py
+    ├── musica/
+    │   ├── __init__.py
+    │   ├── plataforma.py
+    │   └── biblioteca/
+    │       ├── cancion1.mp3
+    │       ├── cancion2.mp3
+    │       └── ...
+
 4. **Ejecutar la aplicación:**
     ```bash
     python3 app.py
