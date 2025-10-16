@@ -210,7 +210,7 @@ def anadir_cancion_lista(plataforma):
 
 def mostrar_lista(plataforma):
     print('\n --- Ver contenido de una lista ---')
-    listas = plataforma.listar_listas()
+    listas = plataforma.listas
     print('Listas disponibles:')
     if not listas:
         print("No hay listas disponibles")
@@ -320,7 +320,7 @@ def eliminar_cancion_lista(plataforma):
 def menu_reproduccion(plataforma):
     print('\n --- Reproducción ---')
     
-    listas = plataforma.listar_listas()
+    listas = plataforma.listas
     print('Listas disponibles:')
     if not listas:
         print("No hay listas disponibles")
